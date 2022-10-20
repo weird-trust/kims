@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  padding: 25px;
+  height: 100vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 0px 50px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'headphones intro intro . .'
+    '. . . . .'
+    '. . . . .'
+    'image1 image2 image3 image3 image3'
+    'image1 image2 image3 image3 image3';
+}
+
+.headphones {
+  grid-area: headphones;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.image1 {
+  grid-area: image1;
+  border-radius: 5px;
+}
+
+.image2 {
+  grid-area: image2;
+  border-radius: 5px;
+}
+
+.image3 {
+  grid-area: image3;
+  border-radius: 5px;
+}
