@@ -20,7 +20,7 @@ export default function Home() {
             is in the context of acting, of public speaking, or of business.
           </h2>
           <Link href="/audiojourney">
-            <a>Start Here</a>
+            <a className={styles.start}>Start Here</a>
           </Link>
         </div>
         <div className={styles.image1}></div>

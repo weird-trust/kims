@@ -1,4 +1,17 @@
 export interface ContentProps {
-  content: object;
-  index: object;
+  content: [
+    {
+      isActive?: boolean;
+      id: number;
+      title: string;
+      titleNumber: number;
+      copy: string;
+      subcontent: [
+        {
+          description: string;
+          timestamp: string;
+        }
+      ];
+    }
+  ];
 }

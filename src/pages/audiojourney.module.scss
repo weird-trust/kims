@@ -2,34 +2,33 @@
 
 .container {
   display: grid;
+  position: relative;
   height: 50vh;
+  width: auto;
+  padding: 15px;
   border: 1px solid red;
-  padding: 25px;
+
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-auto-rows: 1fr;
-  gap: 0px 50px;
+  gap: 5px 5px;
   grid-auto-flow: row;
   grid-template-areas:
     'navbar navbar navbar navbar navbar'
     '. chapter infoarea infoarea infoarea'
-    'contact . infoarea infoarea infoarea'
+    '. . infoarea infoarea infoarea'
     '. . . . .'
     'pause . . . .';
 }
 
-.navbar {
-  grid-area: navbar;
-  height: 50%;
-}
 .navbarItem {
+  grid-area: navbar;
   --progress: 0;
-
   display: flex;
   align-items: center;
   height: 100%;
-  width: 100%;
-  border-left: 1px solid #fff;
+  width: 0;
+
   border-top: 1px solid #fff;
   position: relative;
 
@@ -38,19 +37,25 @@
     content: '';
     top: 0;
     left: 0;
-    background: red;
-    height: 10px;
-    width: 100%;
+    width: 0;
     transform: scaleX(var(--progress));
     transform-origin: left;
   }
 }
 
-.navbarItem a {
+.navbarItem button {
+  align-self: end;
+  position: relative;
+  appearance: none;
   transform: rotate(-90deg);
-  width: 80px;
-  height: 20px;
+  min-width: 68px;
+  min-height: 20px;
   border-top: 1px solid #fff;
+  color: white;
+  background: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: left;
 }
 
 .navbarItem a:first-of-type {
@@ -63,11 +68,13 @@
 
 .pause {
   grid-area: pause;
+  align-self: end;
 
   button {
     border: none;
     background-color: transparent;
-    font-family: inherit;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     cursor: pointer;
     color: #fff;
@@ -79,6 +86,11 @@
   grid-area: chapter;
   text-align: right;
 }
+
 .contact {
   grid-area: contact;
+  position: absolute;
+  width: 150px;
+  bottom: 0;
+  border: 1px solid red;
 }

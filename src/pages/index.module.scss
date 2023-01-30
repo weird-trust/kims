@@ -21,19 +21,29 @@
 
 .intro {
   grid-area: intro;
+  display: grid;
 }
 
 .image1 {
   grid-area: image1;
   border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 .image2 {
   grid-area: image2;
   border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 .image3 {
   grid-area: image3;
   border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.start {
+  padding-top: 10px;
+  text-decoration: underline;
+  text-underline-position: 5px;
 }
